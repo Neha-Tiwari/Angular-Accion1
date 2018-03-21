@@ -1,0 +1,358 @@
+
+  <!-- <main class="page">   -->
+      <!-- case study, lets talk, newsletter - angular starts here-->
+
+      <section class="page-section cta-section">
+        <div class="row page-wrap">
+          <div class="col-6 column" *ngFor="let cstalk of cstudytalk">
+            <a href="#" class="cta-block">
+              <span class="bg-img">
+                <img src={{cstalk.bgimg}} alt="cstudy">
+                <!-- <img src="img/work.jpeg" alt=""> -->
+              </span>
+              <div class="cta-wrap vertical-aligner">
+                <article class="vertical-center">
+                  <h2>{{cstalk.title}}</h2>
+                  <p>{{cstalk.desc}}<br></p>
+                    <!-- <i class="cta-icon icon-arrow_forward"></i> -->
+                    <h3>
+                        <i class="cta-icon icon-arrow_forward">  <i class="fa fa-arrow-right" ></i> </i>
+                    </h3>
+                  
+                </article>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="page-wrap newsletter-wrap">
+          <!-- (click)="onSelect(email)" -->
+          <form name="form" action="#" class="row"  >
+            <div class="text-field col-10" >
+              <label for="email">
+                Join our newsletter
+              </label> 
+              <!-- <input type="text" id="email" name="email" placeholder="Enter your e-mail" autocomplete="off"> -->
+            </div>
+
+            <div class="button-field col-2">
+              <button>
+                Subscribe
+                <i class="cta-icon icon-arrow_forward">  <i class="fa fa-arrow-right"></i>  </i> 
+              </button>
+            </div>
+          </form> 
+
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" [formControl]="emailFormControl">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')"> 
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong> required </strong>
+                </mat-error>
+            </mat-form-field>
+          </form>
+          <br>
+          
+        </div>
+      </section>
+
+      <!-- case study, lets talk, newsletter - angular ends here-->
+  <!-- </main> -->
+    
+    <!-- Footer for Accion - Angular starts here -->
+    <footer class="global-footer">
+      <div class="page-wrap">
+        <div class="row footer-row">
+          <div class="footer-col col-3" *ngFor="let line1 of line1footer">
+
+            <ul class="line1footer">
+                <!-- (click)="onSelect(line1)" -->
+              <li [class.selected]="line1 === selectedLine1" >
+
+                <h1>
+                  <span class="hidden">{{line1.clogo2}}</span>
+                  <a href="#" class="footer-logo">
+                    <!-- <img src="img/logo.svg" alt="" class="inject-me"> -->
+                    <img src={{line1.clogo2}} alt="" height="40" width="150" class="inject-me">
+                  </a>
+                  <span class="sub-title">
+                    {{line1.title1}}
+                    <br>{{line1.title2}}
+                  </span>
+                </h1>
+
+                <ul class="footer-nav">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line1.link1}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line1.link2}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line1.link3}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line1.link4}}</a>
+                  </li>
+
+                </ul>
+
+                <h2>{{line1.title3}}</h2>
+
+                <ul class="social-nav">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+
+                  </li>
+
+                  <li>
+
+                    <a href="#">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <!-- <i class="fa fa-linkedin-in"></i> -->
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-youtube"></i>
+                    </a>
+
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col col-3" *ngFor="let line2 of line2footer">
+            <ul class="line2footer">
+                <!-- (click)="onSelect(line2) -->
+              <li [class.selected]="line2 === selectedLine2" >
+
+                <h2>{{line2.title1}}</h2>
+
+                <ul class="footer-nav">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link1}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link2}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link3}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link4}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link5}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link6}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link7}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link8}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line2.link9}}</a>
+                  </li>
+
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col col-3" *ngFor="let line3 of line3footer">
+            <ul class="line3footer">
+                <!-- (click)="onSelect(line2)" -->
+              <li [class.selected]="line2 === selectedLine2" >
+
+
+                <h2>{{line3.title1}}</h2>
+
+                <ul class="footer-nav">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link1}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link2}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link3}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link4}}</a>
+                  </li>
+                </ul>
+
+                <h2>{{line3.title2}}</h2>
+
+                <ul class="footer-nav">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link5}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link6}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link7}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line3.link8}}</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="footer-col col-3" *ngFor="let line4 of line4footer">
+            <ul class="line4footer">
+                <!-- (click)="onSelect(line4)" -->
+              <li [class.selected]="line4 === selectedLine4" >
+
+                <h2>{{line4.title1}}</h2>
+
+                <ul class="footer-nav">
+                  <li>
+                    <a href="#"> {{line4.link1}}</a>
+                  </li>
+                  <li>
+                    <a href="#"> {{line4.link2}}</a>
+                  </li>
+                  <li>
+                    <a href="#"> {{line4.link3}}</a>
+                  </li>
+                  <li>
+                    <a href="#"> {{line4.link4}}</a>
+                  </li>
+                </ul>
+
+
+                <h2>{{line4.title2}}</h2>
+
+                <ul class="footer-nav">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line4.link5}}</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-arrow-right"></i> {{line4.link6}}</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <div class="legal row">
+          <ul class="baseline1" *ngFor="let base1 of baseline1">
+              <!-- (click)="onSelect(base1)" -->
+            <li [class.selected]="base1 === selectedBase1" >
+
+              <span class="col-3" style="color: #67717c;  ">
+                <!-- {{base1.copyright}}  -->
+                <i class= "">
+                  <!-- <i class="fa fa-copyright" style="font-family: 'Raleway', sans-serif;"> -->
+                  &copy;
+                <!-- </i> -->
+              </i> {{base1.copyright}} 
+              </span>
+            </li>
+          </ul>
+
+          <ul class="legal-links col-9"  *ngFor="let base2 of baseline2" >
+              <!-- (click)="onSelect(base2)" -->
+            <li [class.selected]="base2 === selectedBase2" >
+
+              <ul class="baseline2">
+                <li>
+                  <a href="#">{{base2.terms}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+                </li>
+                <li>
+                  <a href="#">{{base2.policy}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+                </li>
+                <li>
+                  <a href="#">{{base2.crafted}}
+                    <span class="red">&hearts;</span> {{base2.cname}}</a>
+                </li>
+              </ul>
+
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Footer for Accion - Angular ends here -->
+
+    <div class="off-canvas main-navigation">
+      <div class="mn-wrap">
+        <a href="#" class="close-nav">
+          <i class="icon-close"></i>
+        </a>
+        <nav class="main-nav-wrap">
+    
+        </nav>
+      </div>
+    </div>
+    
+    <div class="chat-bot" >
+     <div class="chat-bot-wrap">
+      <a href="#" class="bot-trigger">
+    
+      </a>
+      <div class="bot-notification">
+    
+      </div>
+      <div class="chat-bot-ui">
+    
+      </div>
+      </div>
+    </div>

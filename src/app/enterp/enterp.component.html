@@ -1,0 +1,82 @@
+
+
+<main class="page">
+    <!-- // Section 2 for enterprises - angular starts here -->
+
+    <section class="page-section content-block feature-block alt-bg scroll-section">
+      <div class="vertical-aligner">
+        <div class="page-wrap row" *ngFor="let fimg of fimgarray">
+          <div class="col-6">
+            <div class="parallax-feature">
+              <ul class="fimgarray">
+                <li [class.selected]="fimg === selectedFimg" (click)="onSelect(fimg)">
+                  <figure class="feature-img">
+                    <!--<img src="img/corporate.jpg" alt="">-->
+                    <img src={{fimg.img}} alt="corpimg">
+                  </figure>
+                  <div class="feature-icon">
+                    <!--<figure class="feature-icon">-->
+                    <!--<img src="img/corporate.jpg" alt="">-->
+                    <img src={{fimg.icon}} alt="entimg" class="inject-me">
+                    <!-- </figure> -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6" *ngFor="let ent of entarray">
+            <div class="aligner">
+              <div class="align-center">
+                <ul class="entarray">
+                  <li [class.selected]="ent === entarray" (click)="onSelect(ent)">
+                    <header class="section-heading">
+                      <span class="labeltxt">{{ent.maintitle}}</span>
+                      <h2 class="sub-heading">
+                        <span class="highlight">{{ent.title}}</span>
+                      </h2>
+                    </header>
+                    <article class="excerpt">
+                      <p style="font-family: 'Raleway', sans-serif;
+                              color: #67717c;
+                              font-size: 16px; ">{{ent.desc}}</p>
+                      <a href="#" class="more-btn">
+                        <!-- {{ent.link}} -->
+                        Learn More
+                        <i class="icon icon-arrow_forward"></i>
+                      </a>
+                      <ul class="related-case-studies row">
+                        <li class="item col-6">
+                          <figure class="logo-img">
+                            <!-- <img src="img/awlogo.png" alt="">-->
+                            <img src={{ent.logo1}} alt="cs1img">
+                          </figure>
+                          <a href="#">
+                            <h3>{{ent.casestudy1}}
+                                <i class="icon icon-arrow_forward"><i class="fa fa-arrow-right"> </i></i>
+                            </h3>
+                          </a>
+                        </li>
+                        <li class="item col-6">
+                          <figure class="logo-img">
+                            <!--<img src="img/awlogo.png" alt="">-->
+                            <img src={{ent.logo2}} alt="cs2img">
+                          </figure>
+                          <a href="#">
+                            <h3>{{ent.casestudy2}}
+                              <i class="icon icon-arrow_forward"> <i class="fa fa-arrow-right"> </i></i>
+                            </h3>
+                          </a>
+                        </li>
+                      </ul>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- // Section 2 For enterprises - angular ends here -->
+  </main>

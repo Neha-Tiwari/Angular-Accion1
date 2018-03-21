@@ -1,0 +1,88 @@
+<main class="page">
+  <!-- slider section -angular starts here -->
+  
+  <section class="page-section hero-banner">
+    <div class="page-wrap" style="margin-top:40px;">
+      <div class="slider-wrap">
+          <div class="swiper-container" [swiper]="banner1Config" >
+            <ul class="swiper-wrapper" > 
+              <li class="slide vertical-center" class="swiper-slide" *ngFor="let slide1 of sliderarr1" [class.selected]="slide1 === selectedSlide1" (click)="onSelect(slide1)">
+                <div class="animated-svg">
+                  <div class="svg-slide">
+                    <figure id="tagline" >
+
+                      <!-- <span class="main-svg tagline1" > -->
+                        <span class="blink-image1">
+                          
+                          <!-- <mat-icon name="tagline" style="animation: blinker 4s linear infinite;" svgIcon={{slide1.imgname1}} style="height: 110%; width: 110%; margin-top: 20px; display: block;"></mat-icon> -->
+                          <img class="inject-me" src={{slide1.imgname1}} style="animation: blinker 52s linear infinite; height: 100%; width: 110%; margin-top: 30px; display: block;">
+                        <!-- <img src={{slide1.img1}} alt="" class="inject-me" height="450px" width="450px" align-item="right">  --> 
+                      </span>
+
+                      <!-- <span class="burst-anim burst1"> -->
+                        <span class="blink-image2">                          
+                          <!-- <mat-icon name="burst" svgIcon={{slide1.imgname2}} style="height: 100%; width: 90%; margin-top: -380px; display: block;"></mat-icon> -->
+                          <img class="inject-me" src={{slide1.imgname2}} style="animation: blinker 4s linear infinite; height: 100%; width: 110%; margin-top: -480px; display: block;">
+                        <!-- <img src={{slide1.img2}} alt="" class="inject-me" height="450px" width="450px" align-item="right"> -->
+                      </span>
+                    </figure>
+                  </div>
+                </div>
+                  <div class="aligner">
+                    <div class="vertical-content aligner-item">
+                      <h2 class="typewriter">
+                      <strong class="js-letters mast__text smallblack">{{slide1.title1}}</strong>
+                      <span class="js-letters mast__text"> {{slide1.title2}} </span>
+                      <span class="js-letters mast__text">{{slide1.title3}}</span>
+                      <span class="js-letters mast__text"> {{slide1.title4}}</span>
+                      </h2>
+                      <p style="font-family: 'Raleway', sans-serif; color: #67717c; font-weight: 600;">{{slide1.desc}}</p>
+                      <a href="#section_capabilities" class="main-cta">Our Capabilities {{slide1.link}}
+                      <i class="fa fa-arrow-down"></i>
+                      </a>
+                    </div>
+                  </div>
+              </li>
+            </ul>
+          <!-- <div style="line-height:25px;" class="swiper-pagination"></div> -->
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="wave parallax-img">
+      <img src="assets/img//waves.svg" alt="" class="inject-me">
+      </div> 
+    
+      <span class="mouse-anim">
+    
+      <img src="assets/img//mouse.svg" alt="" class="inject-me" >
+      </span>
+  </section>
+  
+  <!-- <div class="sample">
+    <span class="main-svg">
+     <img class="blink-image1" src="../../assets/img/analytics.png" width="80" height="100">
+    </span>
+    <br>
+    <p class="blink-text1" > hieeee</p> 
+    <br>
+    <mat-icon class="main-svg tagline1" style="animation: blink normal 1s infinite ease-in-out;">home</mat-icon>
+    <br>
+    <mat-icon svgIcon="thumbs-up">Thumb</mat-icon>
+  </div> -->
+    <!-- <span class="main-svg tagline1" >
+      <mat-icon name="tagline" svgIcon={{slide1.imgname1}} style="height: 100%; width: 90%; margin-top: 20px; display: block;"></mat-icon>
+    <img src={{slide1.img1}} alt="" class="inject-me" height="450px" width="450px" align-item="right">  
+   </span>
+
+    <span class="burst-anim burst1">
+      <mat-icon name="burst" svgIcon={{slide1.imgname2}} style="height: 100%; width: 90%; margin-top: -380px; display: block;"></mat-icon>
+    <img src={{slide1.img2}} alt="" class="inject-me" height="450px" width="450px" align-item="right">
+    </span> -->
+    
+  <!-- slider section -angular ends here -->
+
+  
+</main> 
+

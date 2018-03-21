@@ -1,0 +1,80 @@
+    
+  <main class="page">  
+    <!-- Section for  Open source technologies - angular starts here -->
+
+    <section class="page-section content-block feature-block alt-bg scroll-section">
+        <div class="vertical-aligner">
+          <div class="page-wrap row" *ngFor="let oimg of oimgarray">
+            <div class="col-6">
+              <div class="parallax-feature">
+                <ul class="oimgarray">
+                  <li [class.selected]="oimg === selectedoimg" (click)="onSelect(oimg)">
+                    <figure class="feature-img">
+                      <!-- <img src="img/retail.jpg" alt=""> -->
+                      <img src={{oimg.img}} alt="retailimg">
+                    </figure>
+                    <div class="feature-icon">
+                      <!-- <img src="img/opensource.svg" class="inject-me" alt=""> -->
+                      <img src={{oimg.icon}} alt="osimg" class="inject-me">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6" *ngFor="let opens of opensarray">
+              <div class="aligner">
+                <div class="align-center">
+                  <ul class="opensarray">
+                    <li [class.selected]="opens === opensarray" (click)="onSelect(opens)">
+                      <header class="section-heading">
+                        <span class="labeltxt">{{opens.maintitle}}</span>
+                        <h2 class="sub-heading">
+                          <span class="highlight">
+                            {{opens.title}}</span>
+                        </h2>
+                      </header>
+                      <article class="excerpt">
+                        <p style="font-family: 'Raleway', sans-serif;
+                              color: #67717c;
+                              font-size: 16px;">{{opens.desc}}</p>
+                        <a href="#" class="more-btn">
+                          <!-- {{opens.link}}  -->
+                          Learn More
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                        <ul class="related-case-studies row">
+                          <li class="item col-6">
+                            <figure class="logo-img">
+                              <!-- <img src="img/awlogo.png" alt=""> -->
+                              <img src={{opens.logo1}}>
+                            </figure>
+                            <a href="#">
+                              <h3>{{opens.casestudy1}}
+                                  <i class="icon icon-arrow_forward"> <i class="fa fa-arrow-right"> </i></i>
+                              </h3>
+                            </a>
+                          </li>
+                          <li class="item col-6">
+                            <figure class="logo-img">
+                              <!-- <img src="img/awlogo.png" alt=""> -->
+                              <img src={{opens.logo2}}>
+                            </figure>
+                            <a href="#">
+                              <h3>{{opens.casestudy2}}
+                                  <i class="icon icon-arrow_forward"> <i class="fa fa-arrow-right"> </i></i>
+                              </h3>
+                            </a>
+                          </li>
+                        </ul>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section for  Open source technologies - angular ends here -->
+  </main>

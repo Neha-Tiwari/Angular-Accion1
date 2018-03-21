@@ -1,0 +1,38 @@
+<main class="page">
+
+<!-- Section Engagement model - angular starts here -->
+
+<section class="process-section page-section content-block">
+    <header class="section-heading center">
+      <span class="labeltxt">Engagement Models</span>
+      <h2 class="sub-heading">How do
+        <span class="highlight">we work</span>.</h2>
+    </header>
+    <div class="page-wrap">
+      <div class="coe-wrap row">
+        <article class="coe-block col-4" *ngFor="let enmodel of enmodelarray">
+          <div class="cb-wrap">
+            <a href="#">
+              <ul class="enmodelarray">
+                <li [class.selected]="enmodel === selectedEnmodel" (click)="onSelect(enmodel)">
+                  <figure class="icon">
+                    <img src={{enmodel.img}} alt="enmodel">
+                  </figure>
+                  <h3 style="font-family: 'Barlow', sans-serif; font-size: 16px;">{{enmodel.title}}</h3>
+                  <p style="font-family: 'Raleway', sans-serif; font-size: 16px;">{{enmodel.desc}}</p>
+                  <a href="#" class="button more-button">
+                    <!-- {{enmodel.link}}  -->
+                    Learn More
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Engagement model - angular endss here -->
+</main>

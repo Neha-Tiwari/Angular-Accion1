@@ -1,0 +1,74 @@
+  <main class="page"> 
+    <!--// Section for Tech / Startup Companies - angular starts here -->
+
+    <section class="page-section content-block feature-block scroll-section">
+      <div class="vertical-aligner" *ngFor="let sup of startuparray">
+        <div class="page-wrap row">
+          <div class="col-6">
+            <div class="aligner">
+              <div class="align-center">
+                <ul class="startuparray">
+                  <li [class.selected]="sup === startuparray" (click)="onSelect(sup)">
+                    <header class="section-heading">
+                      <span class="labeltxt">{{sup.maintitle}}</span>
+                      <h2 class="sub-heading">
+                        <span class="highlight">{{sup.title}}</span>
+                      </h2>
+                    </header>
+                    <article class="excerpt">
+                      <p style="font-family: 'Raleway', sans-serif;
+                              color: #67717c;
+                              font-size: 16px;">{{sup.desc}}</p>
+                      <a href="#" class="more-btn">
+                        <!-- {{sup.link}}  -->
+                        Learn More
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
+                      <ul class="related-case-studies row">
+                        <li class="item col-6">
+                          <figure class="logo-img">
+                            <!-- <img src="img/awlogo.png" alt=""> -->
+                            <img src={{sup.logo1}} alt="cs1img">
+                          </figure>
+                          <a href="#">
+                            <h3>{{sup.casestudy1}}
+                                <i class="icon icon-arrow_forward"> <i class="fa fa-arrow-right"> </i></i>
+                            </h3>
+                          </a>
+                        </li>
+                        <li class="item col-6">
+                          <figure class="logo-img">
+                            <!-- <img src="img/awlogo.png" alt=""> -->
+                            <img src={{sup.logo2}} alt="cs2img">
+                          </figure>
+                          <a href="#">
+                            <h3>{{sup.casestudy2}}
+                                <i class="icon icon-arrow_forward"> <i class="fa fa-arrow-right"> </i></i>
+                            </h3>
+                          </a>
+                        </li>
+                      </ul>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="parallax-feature" *ngFor="let simg of simgarray">
+              <figure class="feature-img">
+                <!-- <img src="img/technology.jpg" alt=""> -->
+                <img src={{simg.img}} alt="techimg">
+              </figure>
+              <div class="feature-icon">
+                <!-- <img src="img/startup.svg" alt="" class="inject-me"> -->
+                <img src={{simg.icon}} alt="startimg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--// Section for Tech Companies - angular ends here -->
+  </main> 

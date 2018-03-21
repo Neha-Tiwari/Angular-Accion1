@@ -1,0 +1,26 @@
+
+  <main class="page">
+    <!-- Section Our Clients - angular starts here -->
+
+      <section class="customer-logos page-section content-block">
+        <div class="page-wrap">
+          <header class="section-heading center">
+            <span class="labeltxt">Our Clients</span>
+            <h2 class="sub-heading">These companies
+              <span class="highlight">trust us</span>.</h2>
+          </header>
+          <div class="row logo-list-wrap">
+            <div class="logo-col col-3" *ngFor="let clogo of clientlogoarray">
+              <ul class="clientlogoarray">
+                <li [class.selected]="clogo === selectedClogo" (click)="onSelect(clogo)">
+  
+                  <img src={{clogo.img}} alt={{clogo.alt}}>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Section Our Clients - angular ends here -->
+  </main>

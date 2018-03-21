@@ -19,10 +19,16 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "css/style.css",
+        "../node_modules/font-awesome/css/font-awesome.css" ,
+        "../node_modules/swiper/dist/css/swiper.css"    
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/swiper/dist/js/swiper.js" 
+      ],
       "environmentSource": "environments/environment.ts",
+     
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"

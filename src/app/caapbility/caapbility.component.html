@@ -1,0 +1,59 @@
+
+  <main class="page">  
+    <!-- section 1 capability from capability component - angular strats here  mt- 40px-->
+
+    <section class="page-section content-block services-section" id="section_capabilities">
+      <header class="section-heading page-wrap" 
+      
+        style="margin-top:10px;">
+        <span class="labeltxt">Our Capabilities</span>
+        <h2 class="sub-heading">This is
+          <span class="highlight">what we do</span>.</h2>
+        <p style="font-family: 'Raleway', sans-serif; color: #67717c;">
+          Building digital products requires a range of technology capabilities and skill sets.
+          <br> Our discovery workshops and dedicated centres of excellence orchestrate a strong
+          <br> execution of design and build with best-fit emerging technology blocks.
+        </p>
+      </header>
+      <div class="page-wrap">
+        <div class="coe-wrap row">
+          <article class="coe-block col-3 colm-3" *ngFor="let cap of caparray">
+            <div class="cb-wrap">
+              <a href="#">
+                <ul class="caparray">
+                    <!-- (click)="onSelect(cap) -->
+                  <li [class.selected]="cap === selectedCap" >
+                    <figure class="icon" style="padding-right:60px;">
+                      <mat-icon svgIcon={{cap.iconname}}></mat-icon>
+
+                      <!-- <mat-icon [svgIcon]="cap.svgIcon" alt="capimg"></mat-icon> -->
+
+                      <!-- <mat-icon svgIcon="icon-microservices" alt="capimg" ></mat-icon> -->
+
+                      <!-- <img src={{cap.img}} alt="capimg"> -->
+                    </figure>
+                    <h3 style="font-family: 'Barlow', sans-serif; font-size: 22px;">{{cap.title}} </h3>
+                    <p style="font-family: 'Raleway'; font-size: 16px;">{{cap.desc}}</p>
+                    <a class="button more-button" href="#">Learn More
+                      <!-- <i class="icon-arrow_forward"></i> -->
+                      <i class="fa fa-arrow-right"></i>
+                    </a>
+                    <br>&nbsp;&nbsp;
+                  </li>
+                  <br>
+                </ul>
+
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 1 capability from capability component - angular ends here -->
+
+    </main>
+
+    
+
+    

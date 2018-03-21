@@ -1,0 +1,61 @@
+  
+  
+  <header class="top-nav">
+
+    <div class="page-wrap row">
+      <div class="branding col">
+        <ul class="clogo" *ngFor="let clogo of clogoarray">
+          <li [class.selected]="clogo === selectedClogo" (click)="onSelect(clogo)">
+            <a href="#nogo" class="logo">
+              <!-- <img src="img/logo.svg" alt="" class="inject-me">  -->
+              <img src={{clogo.clogo1}} alt="clogo" class="inject-me">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="col nav-bar">
+        <ul>
+          <!-- (click)="onSelect(head) [class.selected]="head === selectedHead"-->
+          <li  >
+            <ul class="main-nav row">
+              <li *ngFor="let head of headerarray">
+                <a href="capabilities.html">
+                  <span class="small">{{head.ldesc1}}</span>
+                  <span class="label">
+                    {{head.lhead1}}
+                    <i class="fa fa-angle-down"></i>
+                  </span>
+                </a>
+              </li>
+
+              <li class="full-nav-icon navicon nav-trigger">
+                <a href="#">
+                  <span class="txt">Menu
+                    <!--{{head.lhead5}}-->
+                  </span>
+                  <i class="icon icon-nav icon-menu"></i>
+                </a>
+              </li>
+
+              <li class="navicon">
+                <a href="#">
+                  <!--{{head.search}} -->
+                  <!-- <i class="icon icon-nav icon-search"></i> -->
+                  <i class="fa fa-search"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <!--{{head.talkbutton}}-->
+                  <span class="cta-btn">Let's Talk</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Section header of index.html - angular ends here -->

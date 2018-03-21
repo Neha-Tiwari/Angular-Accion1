@@ -1,0 +1,133 @@
+/* .slider-wrap .animated-svg .svg-slide > .main-svg.tagline1  > svg {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -225px 0 0 -225px;
+  }
+
+  .slider-wrap .animated-svg .svg-slide > .main-svg.tagline1 > svg {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -225px 0 0 -225px;
+    -webkit-animation-name: burstin; 
+      -webkit-animation-duration: 100ms; 
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: burstin; 
+      -moz-animation-duration: 100ms; 
+      -moz-animation-iteration-count: 1;
+      -moz-animation-timing-function: linear;
+      animation-name: burstin; 
+      animation-duration: 100ms; 
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+  }
+  
+figure.main-svg.tagline1 > svg #elements,
+figure.main-svg.tagline1 > svg #decorative,
+figure.main-svg.tagline1 > svg #elements > g {
+    transform-origin:center;
+    -webkit-animation-name: rotate; 
+    -webkit-animation-duration: 8s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 8s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: rotate; 
+    animation-duration: 8s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 100ms;
+}
+
+
+figure.main-svg.tagline1  > svg #elements > g {
+  animation-direction: reverse;
+}
+
+figure.main-svg.tagline1  > svg #decorative {
+  animation-duration: 12s;
+}
+
+figure.main-svg.tagline1  > svg #elements > g {
+  animation-duration: 8s;
+}
+
+main-svg.tagline1  {
+    position: relative;
+    height: 100%;
+  }
+
+.main-svg.tagline1  .burst-anim.burst1 {
+    position: absolute;
+    transform-origin:center;
+      -webkit-animation-name: burst; 
+      -webkit-animation-duration: 0.5s; 
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: burst; 
+      -moz-animation-duration: 0.5s; 
+      -moz-animation-iteration-count: 1;
+      -moz-animation-timing-function: linear;
+      animation-name: burst; 
+      animation-duration: 0.5s; 
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+  } */
+
+  
+  /* .main-svg.tagline1  .burst-anim.burst1 {
+    position: absolute;
+    transform-origin:center;
+      -webkit-animation-name: burst; 
+      -webkit-animation-duration: 0.5s; 
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: burst; 
+      -moz-animation-duration: 0.5s; 
+      -moz-animation-iteration-count: 1;
+      -moz-animation-timing-function: linear;
+      animation-name: burst; 
+      animation-duration: 0.5s; 
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+  }  */
+
+.blink-text1 {
+    animation: blinker1 4s linear infinite;
+  }
+
+  /* taglline1 image */
+.blink-image1 {
+     animation: blinker1 52s linear infinite;
+  /* animation: spin 52s linear infinite; */
+}
+@keyframes spin {
+  100% {
+    -moz-transform: rotate(360);
+  }
+}
+
+
+@keyframes blinker1 {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* burst image */
+.blink-image2 {
+  animation: blinker2 4s linear infinite;
+}
+  @keyframes blinker2 {
+    50% {
+      opacity: 0;
+    }
+  }
